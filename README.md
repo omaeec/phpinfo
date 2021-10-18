@@ -11,7 +11,7 @@ php -f src/index.php -S 0.0.0.0:8080
 ```
 curl localhost:8080/src/index.php
 ```
-Instrucciones para cosntruir imagens docker
+Instrucciones para construir imagen docker
 ```
 git checkout santander
 docker build --file Dockerfile --tag javier2577/phpinfo:santander .
