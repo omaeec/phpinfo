@@ -1,8 +1,8 @@
 # phpinfo
 
 ```
-git clone https://github.com/academiaonline/phpinfo-1
-cd phpinfo-1
+git clone https://github.com/javier2577sg/phpinfo
+cd phpinfo
 git checkout main
 ```
 ```
