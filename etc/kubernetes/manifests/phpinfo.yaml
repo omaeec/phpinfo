@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: phpinfo
-        image: academiaonline/phpinfo:latest
+        image: academiaonline/phpinfo:2.1
         imagePullPolicy: Always
         livenessProbe:
           tcpSocket:
