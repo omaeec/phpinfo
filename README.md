@@ -21,6 +21,9 @@ curl localhost:8080/src/index.php
 ```
 ## RUN THE APPLICATION INSIDE A CONTAINER
 ```
+git checkout 2021-11-axia
+```
+```
 docker build -t ${IMAGE} .
 ```
 ```
