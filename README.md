@@ -17,7 +17,7 @@ IMAGE=phpinfo:latest
 ${ENTRYPOINT} ${CMD}
 ```
 ```
-curl localhost:8080/index.php
+curl localhost:8080/src/index.php
 ```
 ## RUN THE APPLICATION INSIDE A CONTAINER
 ```
