@@ -26,6 +26,9 @@ docker build -t ${IMAGE} .
 ```
 docker run -d --entrypoint ${ENTRYPOINT} --name phpinfo --read-only --restart always -p 8080:8080 -u nobody -v ${PWD}/src/index.php:/src/index.php:ro -w /src/ ${IMAGE} ${CMD}
 ```
+```
+curl localhost:8080/index.php
+```
 ## RUN THE APPLICATION INSIDE A CONTAINER WITHOUT A VOLUME
 ```
 IMAGE=phpinfo:no-volume
@@ -35,4 +38,7 @@ docker build -t ${IMAGE} src/
 ```
 ```
 docker run -d --entrypoint ${ENTRYPOINT} --name phpinfo --read-only --restart always -p 8080:8080 -u nobody -w /src/ ${IMAGE} ${CMD}
+```
+```
+curl localhost:8080/index.php
 ```
