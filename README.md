@@ -31,10 +31,10 @@ docker run -d --entrypoint ${ENTRYPOINT} --name phpinfo --restart always -p 8080
 ```
 ## RUN THE APPLICATION INSIDE A CONTAINER WITHOUT A VOLUME
 ```
-IMAGE=phpinfo:no-volume
-```
-```
 git checkout 2021-11-axia
+```
+```
+IMAGE=phpinfo:no-volume
 ```
 ```
 docker build -f Dockerfile-no-volume -t ${IMAGE} src/
