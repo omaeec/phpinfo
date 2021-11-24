@@ -1,5 +1,5 @@
-FROM alpine:latest
+FROM alpine:latest AS multilayer
 RUN apk add php
 
 FROM scratch
-COPY --from=0 / /
+COPY --from=multilayer / /
