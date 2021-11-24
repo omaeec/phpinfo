@@ -24,12 +24,15 @@ curl localhost:8080/src/index.php
 git checkout 2021-11-axia
 ```
 ```
-docker build -t ${IMAGE} .
+docker build -f Dockerfile-no-volume -t ${IMAGE} .
 ```
 ```
 docker run -d --entrypoint ${ENTRYPOINT} --name phpinfo --restart always -p 8080:8080 -v ${PWD}/src/index.php:/src/index.php:ro ${IMAGE} ${CMD}
 ```
 ## RUN THE APPLICATION INSIDE A CONTAINER WITHOUT A VOLUME
+```
+IMAGE=phpinfo:no-volume
+```
 ```
 git checkout 2021-11-axia
 ```
