@@ -72,5 +72,5 @@
    72  docker images
    73  history
    
-   cat /proc/net/fib_trie
+   cat /proc/net/fib_trie --> Para averiguar la IP dentro de un contenedor.
    
