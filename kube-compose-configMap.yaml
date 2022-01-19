@@ -6,13 +6,16 @@ spec:
   containers:
     -
       args:
-        - -f src/index.php -S 0.0.0.0:8080
+        - -f
+        - index.php
+        - -S
+        - 0.0.0.0:8080
       command:
         - php
-      image: eleigle/redhat-php:latest
-      name: phpinfo-container
+      image: marianosolerpena/redhat-php:latest
+      name: phpinfo-contaniner
       ports:
-        -
+        - 
           containerPort: 8080
           protocol: TCP
       volumeMounts:
@@ -26,7 +29,7 @@ spec:
     -
       configMap:
         defaultMode: 0400
-        items:
+        items: 
           -
             key: index.php
             mode: 0400
