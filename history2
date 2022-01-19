@@ -1,0 +1,64 @@
+git clone https://github.com/eleigle/phpinfo.git
+cd phpinfo
+git checkout contenerizacion
+docker build -f Dockerfile -t redhat-php .
+docker run --rm redhat-php find /bin
+docker run --rm redhat-php find /usr/bin
+docker run --rm redhat-php find /usr/bin |grep php
+docker run --entrypoint /usr/bin/php
+docker run --entrypoint /usr/bin/php --rm redhat-php -v
+php -v
+cat /etc/os-release
+docker run --entrypoint cat --rm redhat-php /etc/os-release
+history
+git pull
+docker build -f Dockerfile -t redhat-php .
+git pull
+docker build -f Dockerfile -t redhat-php .
+docker run --entrypoint php redhat-php -f src/index.php -S 0.0.0.0:8080
+docker run --entrypoint php -p 8080:8080 redhat-php -f src/index.php -S 0.0.0.0:8080
+git pull
+docker build -f Dockerfile -t redhat-php .
+docker run --entrypoint php -p 8080:8080 redhat-php -f src/index.php -S 0.0.0.0:8080
+docker run --entrypoint php -p 8080:8080 -v ./src/index.php:/src/index.php redhat-php -f src/index.php -S 0.0.0.0:8080
+docker run --entrypoint php -p 8080:8080 -v $PWD/src/index.php:/src/index.php redhat-php -f src/index.php -S 0.0.0.0:8080
+ docker images
+docker tag redhat-php:latest eleigle/redhat-php:latest
+docker login
+docker push eleigle/redhat-php:latest
+docker push eleigle/repo1:tagname
+https://downloads-openshift-console.apps.ocp.ganimedes-colomar.es/amd64/linux/oc.tar
+wget https://downloads-openshift-console.apps.ocp.ganimedes-colomar.es/amd64/linux/oc.tar
+ls
+tar xf oc.tar
+ls
+echo $PATH
+ls ..
+mkdir -p ../bin
+mv oc ../bin
+oc version
+oc login --token=sha256~r9L6uYSZ3njTCKm1RtmJDfDmwxRtdfYwn4_wjKUCRAk --server=https://api.ocp.ganimedes-colomar.es:6443
+oc status
+ oc new-project elena
+oc get all
+oc status
+ln -s ../bin/kubectl ../bin/oc
+ln -s ../bin/oc ../bin/kubectl
+kubectl version
+kubectl
+kubectl explain po
+kubectl explain po.spec
+kubectl explain po.spec.containers
+kubectl explain po.spec.containers.ports
+kubectl explain po.spec.containers.volumeMounts
+kubectl explain po.spec.containers.workingDir
+kubectl explain po.spec.volumes
+kubectl explain po.spec.volumes.configMap
+kubectl explain po.spec.volumes.configMap.items
+cd phpinfo
+git pull
+kubectl apply -f kube-compose-configMap.yaml 
+git pull
+kubectl apply -f kube-compose-configMap.yaml 
+kubectl get all
+kubectl describe po
