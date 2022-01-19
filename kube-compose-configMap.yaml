@@ -12,7 +12,7 @@ spec:
         - 0.0.0.0:8080
       command:
         - php
-      image: omar/redhat-php:latest
+      image: omaeec/redhat-php:latest
       name: phpinfo-contaniner
       ports:
         - 
