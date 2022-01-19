@@ -1,0 +1,73 @@
+    1  git clone https://github.com/academiaonline-org/phpinfo
+    2  cd phpinfo
+    3  git checkout main
+    4  php -V
+    5  php -v
+    6  php -f src/index.php -S 0.0.0.0:8080
+    7  top
+    8  cd ..
+    9  top
+   10  cat /proc/1/0
+   11  cat /proc/1/cgroup 
+   12  docker run -d -t alpine
+   13  docker top 21e1bba453dc03111a502f32fe6030ff93b94af7027439ff8fd202f34a545bb4
+   14  ps -ef |grep 21e1bba453dc03111a502f32fe6030ff93b94af7027439ff8fd202f34a545bb4
+   15  cat /proc/15869/cgroup
+   16  cat /proc/1/cgroup 
+   17  cat /proc/15912/cgroup
+   18  php -v
+   19  cd phpinfo/
+   20  cd ..
+   21  rm -Rf phpinfo
+   22  git clone https://github.com/omaeec/phpinfo.git
+   23  cd phpinfo/
+   24  git checkuot contenerizacion
+   25  git checkout contenerizacion
+   26  cd ..
+   27  git checkout contenerizacion
+   28  cd phpinfo/
+   29  git pull
+   30  docker rm -f
+   31  docker ps
+   32  docker rm -f 21e1bba453dc
+   33  git clone https://github.com/omaeec/phpinfo.git
+   34  git checkout contenerizacion
+   35  docker build -f Docckerfile -t redhat-php .
+   36  docker build -f Dockerfile -t redhat-php .
+   37  ls
+   38  git pull
+   39  docker build -f Dockerfile -t redhat-php .
+   40  fc -l
+   41  ls
+   42  docker build -f Dockerfile -t redhat-php /tmp
+   43  docker build -f Dockerfile -t redhat-php /src
+   44  docker build -f Dockerfile -t redhat-php src
+   45  cat Dockerfile 
+   46  docker build -f Dockerfile -t redhat-php src
+   47  git pull
+   48  docker build -f Dockerfile -t redhat-php .
+   49  ls
+   50  cat .dockerignore
+   51  docker run --entrypoint php redhat-php -f src/index.php -S 0.0.0.0:8080
+   52  git pull
+   53  docker build -f Dockerfile -t redhat-php .
+   54  git pull
+   55  docker build -f Dockerfile -t redhat-php .
+   56  docker run --entrypoint php redhat-php -f src/index.php -S 0.0.0.0:8080
+   57  docker run --entrypoint php -p 8080 redhat-php -f src/index.php -S 0.0.0.0:8080
+   58  docker run --entrypoint php -p 8080:8080 redhat-php -f src/index.php -S 0.0.0.0:8080
+   59  git pull
+   60  docker build -f Dockerfile -t redhat-php .
+   61  docker run --entrypoint php -p 8080:8080 redhat-php -f src/index.php -S 0.0.0.0:8080
+   62  docker run --entrypoint php -p 8080:8080 -v ./src/index.php:/src/index.php redhat-php -f src/index.php -S 0.0.0.0:8080
+   63  docker run --entrypoint php -p 8080:8080 -v $PWD/src/index.php:/src/index.php redhat-php -f src/index.php -S 0.0.0.0:8080
+   64  history
+   65  docker run --entrypoint php -p 8080:8080 -v $PWD/src/index.php:/src/index.php:ro redhat-php -f src/index.php -S 0.0.0.0:8080
+   66  docker images
+   67  docker tag redhat-php:latest omaeec/redhat-php:latest
+   68  docker push omaeec/redhat-php:latest
+   69  docker login
+   70  docker push omaeec/redhat-php:latest
+   71  fc -l
+   72  docker images
+   73  history
