@@ -1,0 +1,97 @@
+oc login --token=sha256~r9L6uYSZ3njTCKm1RtmJDfDmwxRtdfYwn4_wjKUCRAk --server=https://api.ocp.ganimedes-colomar.es:6443
+oc new-project marianosolerpena
+oc get all
+oc status
+ln -s ../bin/oc ../bin/kubectl
+kubectl version
+kubectl 
+kubectl explain po
+kubectl explain po.spec
+kubectl explain po.spec.containers
+kubectl explain po.spec.containers.ports
+kubectl explain po.spec.containers.volmeMounts
+kubectl explain po.spec.containers.volumeMounts
+kubectl explain po.spec.containers.workingDir
+kubectl explain po.spec.containers.volumes
+kubectl explain po.spec.volumes
+kubectl explain po.spec.volumes.configMap
+kubectl explain po.spec.volumes.configMap.items
+pwd
+ll
+cd phpinfo/
+ls -tlr
+git pull
+ls -ltr
+kubectl apply -f kube-compose-configMap.yaml 
+ls -ltr
+kubectl get all
+kubectl describe po
+history
+kubectl describe po
+kubectl ev
+kubectl get ev
+fc -l
+kubectl get e
+kubectl get bo
+kubectl get po
+kubectl get po -o yaml
+kubectl create cm --from-file src/index.php phpinfo-cm
+kubectl get cm/phpinfo-cm -oyaml
+rm src/index.php 
+kubectl get po
+kubectl get ev
+kubectl logs po
+kubectl logs phpinfo-po
+git pull
+history
+kubectl apply -f kube-compose-configMap.yaml
+kubectl delete -f kube-compose-configMap.yaml
+kubectl apply -f kube-compose-configMap.yaml
+kubectl ev
+kubectl get ev
+kubectl logs phpinfo-po
+kubectl delete -f kube-compose-configMap.yaml
+kubectl apply -f kube-compose-configMap.yaml
+kubectl delete -f kube-compose-configMap.yaml
+git pull
+kubectl apply -f kube-compose-configMap.yaml
+kubectl logs phpinfo-po
+kubectl get ev
+kubectl logs phpinfo-po
+kubectl delete -f kube-compose-configMap.yaml
+git pull
+kubectl apply -f kube-compose-configMap.yaml
+kubectl get ev
+kubectl logs phpinfo-po
+kubectl get po
+kubectl get po -oyaml
+git pull
+kubectl delete -f kube-compose-configMap.yaml
+kubectl apply -f kube-compose-configMap.yaml
+kubectl get po -oyaml
+git pull
+kubectl delete -f kube-compose-configMap.yaml
+kubectl apply -f kube-compose-configMap.yaml
+kubectl get po -oyaml
+kubectl explain svc
+kubectl explain svc.spec
+kubectl explain svc.spec.ports
+kubectl explain svc.spec.selector
+kubectl explain svc.spec.type
+kubectl get po
+kubectl exec phpinfo-po hostname
+kubectl exec phpinfo-po date
+kubectl exec phpinfo-po --date
+kubectl exec phpinfo-po -- date
+kubectl exec phpinfo-po -- ls
+kubectl exec phpinfo-po -- pwd
+kubectl exec phpinfo-po -- ifconfig
+kubectl exec phpinfo-po -- wget
+kubectl exec phpinfo-po -- curl
+kubectl exec phpinfo-po -- curl locahost:8080
+kubectl exec phpinfo-po -- curl localhost:8080
+kubectl port-forward --help
+kubectl port-forward 8080:8080
+kubectl port-forward  po/phpinfo-po 8080:8080
+history
+kubectl port-forward svc/phpinfo-svc 8080:80
