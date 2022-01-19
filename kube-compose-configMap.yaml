@@ -2,6 +2,10 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: phpinfo-po
+  labels: 
+    app: phpinfo
+    env: production
+    tier: frontend
 spec:
   containers:
     -
@@ -12,7 +16,7 @@ spec:
         - 0.0.0.0:8080
       command:
         - php
-      image: omaeec/redhat-php:latest@sha256:9062867573cec1b9beac84c2f36de36cc2eff07a06f9dfbe7c64bfb8291046e0
+      image: omaeec/redhat-php:latest@sha256:985fb1b8ce438cb03554d00ec9002e382f1154f42b8808c1d203e9e834e4213c
       name: phpinfo-contaniner
       ports:
         - 
@@ -36,3 +40,28 @@ spec:
             path: index.php
         name: phpinfo-cm
       name: phpinfo-volume
+---
+apiVersion: v1
+kind: Service
+metadata: 
+  name: phpinfo-svc
+spec:
+  ports:
+    -
+      port: 80
+      protocol: TCP
+      targetPort: 8080
+  selector:
+    app: phpinfo
+    env: production
+    tier: frontend
+  type: ClusterIP
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: phpinfo-route
+spec:
+  to: 
+    kind: Service
+    name: phpinfo-svc
