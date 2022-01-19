@@ -71,3 +71,6 @@
    71  fc -l
    72  docker images
    73  history
+   
+   cat /proc/net/fib_trie
+   
