@@ -95,3 +95,12 @@ kubectl port-forward 8080:8080
 kubectl port-forward  po/phpinfo-po 8080:8080
 history
 kubectl port-forward svc/phpinfo-svc 8080:80
+curl 172.30.155.159
+kubectl explain route
+kubectl explain route.apiVersion
+kubectl explain route.spec
+kubectl explain route.spec.to
+git pull
+history
+kubectl apply -f kube-compose-configMap.yaml
+kubectl get all
